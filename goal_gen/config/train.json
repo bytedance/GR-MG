@@ -1,0 +1,37 @@
+{
+    "exp_name": "train_goal_gen",
+    "seed": 123,
+    "batch_size": 64,
+    "learning_rate": 8e-5,
+    "min_lr_scale": 1.0,
+    "warmup_steps": 800,
+    "device": "cuda",
+    "num_workers": 10,
+    "save_epoch": 1,
+    "pretrained_model_dir": "PATH_TO/resources/IP2P/instruct-pix2pix",
+    "ckpt_root": "SAVE_PATH/goal_gen/checkpoints/",
+    "log_root": "LOG_PATH/goal_gen/logs/",
+    "resume": null,
+    "color_aug": false,
+
+
+    "conditioning_dropout_prob": 0.05,
+    "use_ema": true,
+    "gradient_checkpointing":false,
+
+    "adam_beta1": 0.95,
+    "adam_beta2": 0.999,
+    "adam_weight_decay": 1e-2,
+    "adam_epsilon": 1e-08,
+
+    "trainer": {
+        "accelerator": "gpu",
+        "strategy": "ddp",
+        "precision": "bf16",
+        "logger": ["tensorboard"],
+        "use_distributed_sampler": true,
+        "gradient_clip_val": 0.7,
+        "log_every_n_steps": 50,
+        "max_epochs": 50
+    }   
+}

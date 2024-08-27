@@ -1,0 +1,77 @@
+{
+    "seed": 123,
+    "ckpt_root": "SAVE_PATH/policy/checkpoints/",
+    "log_root": "LOG_PATH/policy/logs/",
+    "exp_name":"train_policy",
+    "resume":null,
+    "policy": {
+        "resampler_params": {
+            "depth": 3,
+            "dim_head": 128,
+            "heads": 4,
+            "num_latents": 9,
+            "num_media_embeds": 1
+        },
+        "seq_len": 10,
+        "act_len": 5,
+        "act_latent_dim": 32,
+        "act_encoder_dim": 128,
+        "act_decoder_dim": 128,
+        "progress_decoder_dim":128,
+        "patch_feat_dim": 768,
+        "img_feat_dim": 768,
+        "lang_feat_dim":512,
+        "embed_dim": 384,
+        "use_resampler": true,
+        "n_layer": 12,
+        "n_head": 12,
+        "activation_function": "relu",
+        "dropout": 0.1,
+        "forward_n_max": 25
+    },
+    "trainer":{
+        "pl_config":{
+            "accelerator": "gpu",
+            "strategy": "ddp",
+            "precision": "bf16",
+            "logger": ["tensorboard"],
+            "gradient_clip_val": 1.0,
+            "accumulate_grad_batches": 1,
+            "use_distributed_sampler": true,
+            "log_every_n_steps": 50,
+            "max_epochs": 50
+        },
+        "lr_decay":true,
+        "batch_size": 32,
+        "without_norm_pix_loss": false,
+        "start_epoch": 0,
+        "learning_rate": 1e-3,
+        "min_learning_rate_scale": 1e-2,
+        "weight_decay": 0.0,
+        "betas_1": 0.9,
+        "betas_2": 0.999,
+        "warmup_epochs": 1,
+        "optimizer":"adam",
+        "num_workers": 13,
+        "save_epoch": 1,
+        "gripper_loss_ratio": 0.01,
+        "fwd_loss_ratio": 0.1,
+        "kl_loss_ratio": 1.0,
+        "progress_loss_ratio":1.0,
+        "act_pred": true,
+        "fwd_pred": true,
+        "progress_pred":true,
+        "fwd_pred_hand": true,
+        "fwd_pred_next_n": 3,
+        "finetune": true,
+        "use_pretrain": true,
+        "pretrained_model_path": "PATH_TO_PRETRAINED_CHECKPOINT"
+    },
+
+    "input": {
+        "state_dim": 7,
+        "act_dim": 7,
+        "use_hand_rgb": true,
+        "use_state": true
+    }
+}
