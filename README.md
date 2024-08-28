@@ -78,7 +78,7 @@ If you have any questions about the project, please contact peiyan.li@cripac.ia.
 
 We thank the authors of the following projects for making their code and dataset open source:
 
-- [CALVIN]（https://github.com/mees/calvin）
+- [CALVIN](https://github.com/mees/calvin)
 - [InstructPix2Pix](https://github.com/timothybrooks/instruct-pix2pix)
 - [T5](https://github.com/google-research/text-to-text-transfer-transformer)
 - [GR-1](https://github.com/bytedance/GR-1)
