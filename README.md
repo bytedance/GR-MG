@@ -44,7 +44,7 @@ Download and unzip the [CALVIN](https://github.com/mees/calvin) dataset.
 ### 1. Train Goal Image Generation Model
 ```bash
 # modify the variables in the script before you execute the following instruction
-bash ./goal_gen/train_ip2p.sh  /opt/tiger/GR_MG/goal_gen/config/train.json
+bash ./goal_gen/train_ip2p.sh  ./goal_gen/config/train.json
 ```
 ### 2. Pretrain Multi-modal Goal Conditioned Policy
 We use the method described in [GR-1](https://arxiv.org/abs/2312.13139) and pretrain our policy with Ego4D videos. You can download the pretrained model checkpoint [here](https://lf-robot-opensource.bytetos.com/obj/lab-robot-public/gr_mg_release/pretrained.pt). You can also pretrain the policy yourself using the scripts we provide. Before doing this, you'll need to download the [Ego4D](https://ego4d-data.org/) dataset.
