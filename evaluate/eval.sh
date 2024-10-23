@@ -1,4 +1,4 @@
-cd /opt/tiger/GR_MG
+cd /PATH/TO/GR_MG
 export EPOCHS=(47)
 export CKPT_DIR="PATH_TO_POLICY_DIR"
 export SD_CKPT="/PATH_TO_GOAL_GEN_MODEL_CKPT/epoch=49-step=51450.ckpt"
