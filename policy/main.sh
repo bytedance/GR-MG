@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd /opt/tiger/GR_MG
+cd /PATH/TO/GR_MG
 GPUS_PER_NODE=8 # number of gpus per machine
 MASTER_ADDR={master_address}":"{port} # modify it with your own address and port
 NNODES=1 # number of machines

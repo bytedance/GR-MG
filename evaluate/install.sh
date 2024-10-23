@@ -1,7 +1,6 @@
 #!/bin/bash
 # You should first install the packages needed by policy ang goal image generation model
 # install calvin
-cd /opt/tiger/GR_MG
 git clone --recurse-submodules https://github.com/mees/calvin.git
 export CALVIN_ROOT=$(pwd)/calvin
 cd calvin
@@ -11,7 +10,7 @@ cd ..
 cd $CALVIN_ROOT
 pip3 install setuptools==57.5.0
 sh install.sh
-cd /opt/tiger/GR_MG
+cd /PATH/TO/GR_MG
 export EVALUTION_ROOT=$(pwd)
 
 # Install dependency for calvin
