@@ -121,7 +121,6 @@ class Goalgen_Trainer(pl.LightningModule):
         else:
             checkpoint['state_dict'] = {'unet_ema': self.ema_model.unet.state_dict(),'unet': self.model.unet.state_dict()}
     def on_load_checkpoint(self, checkpoint):
-        # 仅加载unet模块的参数
         if not self.use_ema:
             self.model.unet.load_state_dict(checkpoint['state_dict']['unet'])
         else:
