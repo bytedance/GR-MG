@@ -16,6 +16,7 @@ This repo contains code for the paper:
 
 
 ## News
+- (🔥 New) **(2024.12.18)** Our paper was accepted by IEEE Robotics and Automation Letter (RA-L) !
 - (🔥 New) **(2024.08.27)** We have released the code and checkpoints of GR-MG !
 ## Preparation
 **Note:** We only test GR-MG with CUDA 12.1 and python 3.9
