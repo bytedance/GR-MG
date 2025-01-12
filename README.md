@@ -90,10 +90,11 @@ We thank the authors of the following projects for making their code and dataset
 
 If you find this project useful, please star the repository and cite our paper:
 ```
-@article{li2024gr,
-  title={GR-MG: Leveraging Partially Annotated Data via Multi-Modal Goal Conditioned Policy},
+@article{li2025gr,
+  title={GR-MG: Leveraging Partially-Annotated Data Via Multi-Modal Goal-Conditioned Policy},
   author={Li, Peiyan and Wu, Hongtao and Huang, Yan and Cheang, Chilam and Wang, Liang and Kong, Tao},
-  journal={arXiv preprint arXiv:2408.14368},
-  year={2024}
+  journal={IEEE Robotics and Automation Letters},
+  year={2025},
+  publisher={IEEE}
 }
 ```
